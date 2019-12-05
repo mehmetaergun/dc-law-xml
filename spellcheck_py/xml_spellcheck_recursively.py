@@ -46,7 +46,7 @@ assert list_files()[0] == FIRST_XML
 def spellcheck(word_list: tuple = ('something', 'is', 'hapenning', 'here', 'xml')
                , levenshtein_dist = 2
                , acceptables = [
-                   'xml', 'utf', 'href', 'dccouncil'
+                   'xml', 'utf', 'href', 'dccouncil', 'dcstat'
                    , 'xinclude', 'www', 'xmlns', 'subheading', 'http', 'https'
                    , 'subchapter', 'codification', 'codifications', 'subpart', 'subsec'
                ]
