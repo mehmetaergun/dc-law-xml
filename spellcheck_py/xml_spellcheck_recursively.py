@@ -62,8 +62,9 @@ def spellcheck(word_list: tuple = ('something', 'is', 'hapenning', 'here', 'xml'
         if word not in acceptables:
             if not (re.match(r'^\d+.*', word) or re.match(r'.*\d+$', word)):  # word does not start or end with a digit
                 most_likely_correction = speller.correction(word)
-                print(f'"{word}" => "{most_likely_correction}"')
-                spellings.append((word, most_likely_correction))
+                if word != most_likely_correction:
+                    print(f'"{word}" => "{most_likely_correction}"')
+                    spellings.append((word, most_likely_correction))
     return spellings
 
 
